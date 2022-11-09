@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 EXPOSE 8080
 ADD /var/lib/jenkins/.m2/repository/com/java/capstone/0.0.1-SNAPSHOT/capstone-0.0.1-SNAPSHOT.war capstone.war
 ENTRYPOINT ["java","-war","/capstone.war"]
