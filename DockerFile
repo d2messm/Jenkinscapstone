@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8080
-ADD target/capstone.jar capstone.jar
-ENTRYPOINT ["java","-jar","/capstone.jar"]
+ADD /var/lib/jenkins/workspace/JenkinsDocker/target/capstone-0.0.1-SNAPSHOT.war capstone.war
+ENTRYPOINT ["java","-war","/capstone.war"]
